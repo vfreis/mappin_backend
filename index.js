@@ -10,7 +10,7 @@ dotenv.config()
 app.use(express.json())
 
 mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect(process.env.MONGO_URL || "mongodb+srv://marioboss:crowslerplusmario@cluster0.9wrdk.mongodb.net/pin?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
